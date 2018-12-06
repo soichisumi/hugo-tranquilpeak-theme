@@ -59,6 +59,7 @@
 {{ end }}
 
 {{ with .Params.thumbnailImage }}
+  <!-- with-->
   <meta property="og:image" content="{{ . | absURL }}">
   <meta property="twitter:image" content="{{ . | absURL }}">
 {{ end }}
@@ -73,10 +74,8 @@
   {{ end }}
 {{ end }}
 
-{{ if .Scratch.Get "thumbnailImage" }}
-  <meta property="og:image" content='{{ .Scratch.Get "thumbnailImage" | absURL }}'>
-  <meta property="twitter:image" content='{{ .Scratch.Get "thumbnailImage" | absURL }}'>
-{{ else if .Scratch.Get "gravatarEmail" }}
+{{ if .IsHome }}
+  <!-- if-->
   <meta property="og:image" content="https://www.gravatar.com/avatar/{{ (md5 (.Scratch.Get "gravatarEmail")) | urlize }}?s=640">
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/{{ (md5 (.Scratch.Get "gravatarEmail")) | urlize }}?s=640">
 {{ end }}

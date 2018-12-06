@@ -6,6 +6,8 @@ $open-sans:            'Open Sans';
 $open-sans-sans-serif: 'Open Sans', sans-serif;
 $merriweather-serif:   'Merriweather', serif;
 $menlo:                 Menlo, Consolas, monospace;
+$yu-gothic:             "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+$hiragino:              "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ";
 
 $font-family-base: $open-sans-sans-serif;
 
@@ -18,7 +20,7 @@ $font-families: (
    'image-gallery':     $open-sans,
    'post-header-cover': $merriweather-serif,
    'post-meta':         $open-sans-sans-serif,
-   'post-content':      $merriweather-serif,
+   'post-content':      $yu-gothic, //$merriweather-serif
    'post-excerpt-link': $open-sans-sans-serif,
    'highlight':         $menlo,
    // layout
@@ -165,7 +167,7 @@ $main: (
 
 // Highlight code
 $highlight: (
-    'background':  #f7f8f8,
+    'background':  black, //#f7f8f8
     'font-size':   1.4rem,
     'border':      1px solid,
     'line-height': 2.3rem
@@ -177,7 +179,7 @@ $highlight-colors: (
     // Background
     'white':           #fff,
     // General color
-    'night-rider':     #333,
+    'night-rider':     #93a1a1, //#333
     'bondi-blue':      #0086b3,
     'persimmon':       #df5000,
     'asparagus':       #63a35c,
